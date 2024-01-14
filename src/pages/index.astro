@@ -1,6 +1,15 @@
 ---
+import RootLayout from "@/layouts/root.astro";
 import { css } from "@styled-system/css";
-import "@/styles/globals.css";
 ---
 
-<div class={css({ fontSize: "2xl", fontWeight: "bold" })}>Hello !</div>
+<RootLayout>
+	<div
+		class={css({
+			textStyle: "4xl",
+			color: "accent.11",
+		})}
+	>
+		Hello !
+	</div>
+</RootLayout>

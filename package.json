@@ -16,6 +16,7 @@
 		"typescript": "^5.3.3"
 	},
 	"devDependencies": {
-		"@pandacss/dev": "^0.26.2"
+		"@pandacss/dev": "^0.26.2",
+		"astro-themes": "^0.2.4"
 	}
 }
