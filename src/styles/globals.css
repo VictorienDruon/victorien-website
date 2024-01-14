@@ -1,1 +1,13 @@
 @layer reset, base, tokens, recipes, utilities;
+
+@font-face {
+	font-family: "UniversTE20L";
+	src: url("/fonts/UniversTE20-Light.woff2") format("woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "UniversTE20T";
+	src: url("/fonts/UniversTE20-Thin.woff2") format("woff2");
+	font-display: swap;
+}
