@@ -1,31 +1,82 @@
 import { defineTextStyles } from "@pandacss/dev";
 
 export const textStyles = defineTextStyles({
-	"2xs": {
-		value: { fontSize: "2xs", lineHeight: "0.875rem" },
-	},
 	xs: {
-		value: { fontSize: "xs", lineHeight: "1.125rem" },
+		value: {
+			fontSize: "0.75rem",
+			lineHeight: "1rem",
+		},
 	},
 	sm: {
-		value: { fontSize: "sm", lineHeight: "1.25rem" },
+		value: {
+			fontSize: "0.875rem",
+			lineHeight: "1.25rem",
+		},
 	},
 	md: {
-		value: { fontSize: "md", lineHeight: "1.5rem" },
+		value: {
+			fontSize: "1rem",
+			lineHeight: "1.5rem",
+		},
 	},
 	lg: {
-		value: { fontSize: "lg", lineHeight: "1.75rem" },
+		value: {
+			fontSize: "1.125rem",
+			lineHeight: "1.75rem",
+		},
 	},
 	xl: {
-		value: { fontSize: "xl", lineHeight: "1.875rem" },
+		value: {
+			fontSize: "1.25rem",
+			lineHeight: "1.75rem",
+		},
 	},
 	"2xl": {
-		value: { fontSize: "2xl", lineHeight: "2rem" },
+		value: {
+			fontSize: "1.5rem",
+			lineHeight: "2rem",
+		},
 	},
 	"3xl": {
-		value: { fontSize: "3xl", lineHeight: "2.375rem" },
+		value: {
+			fontSize: "1.875rem",
+			lineHeight: "2.25rem",
+		},
 	},
 	"4xl": {
-		value: { fontSize: "4xl", lineHeight: "2.75rem", letterSpacing: "-0.02em" },
+		value: {
+			fontSize: "2.25rem",
+			lineHeight: "2.5rem",
+		},
+	},
+	"5xl": {
+		value: {
+			fontSize: "3rem",
+			lineHeight: "1",
+		},
+	},
+	"6xl": {
+		value: {
+			fontSize: "3.75rem",
+			lineHeight: "1",
+		},
+	},
+	"7xl": {
+		value: {
+			fontSize: "4.5rem",
+			lineHeight: "1",
+		},
+	},
+	"8xl": {
+		value: {
+			fontSize: "6rem",
+			lineHeight: "1",
+		},
+	},
+	"9xl": {
+		value: {
+			fontSize: "8rem",
+			lineHeight: "1",
+		},
 	},
 });
