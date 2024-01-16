@@ -3,7 +3,7 @@ import { stack } from "@styled-system/patterns";
 
 export const container = stack({
 	flexDir: ["column", "row"],
-	justifyContent: { mdTo2xl: "center" },
+	justifyContent: "center",
 	alignItems: "center",
 	p: ["8", "16", "24"],
 	gap: ["4", "8", "12"],
