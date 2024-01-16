@@ -1,9 +1,7 @@
 import { stack } from "@styled-system/patterns";
 
-export const technologies = stack({
+export const experiences = stack({
 	flexDir: "row",
-	flexWrap: "wrap",
 	justifyContent: "center",
-	alignItems: "center",
-	gap: "8",
+	gap: ["4", "8", "12"],
 });

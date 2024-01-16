@@ -1,17 +1,16 @@
 ---
 import * as styles from "./styles";
-import TechCard from "./components/tech-card/index.astro";
 import { technologies } from "./content";
+import TechCard from "./components/tech-card/index.astro";
+import Section from "@/components/ui/section/index.astro";
 ---
 
-<div class={styles.container}>
-	<h1 class={styles.title}>my tech stack</h1>
-
-	<h2 class={styles.text}>
-		{`here are some of the technologies i use and with which i'm very familiar`}
-	</h2>
-
+<Section
+	title="my tech stack"
+	subtitle="here are some of the technologies i use and with which i'm very familiar"
+	variant="primary"
+>
 	<div class={styles.technologies}>
 		{technologies.map((tech) => <TechCard {...tech} />)}
 	</div>
-</div>
+</Section>

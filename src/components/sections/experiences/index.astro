@@ -1,0 +1,16 @@
+---
+import * as styles from "./styles";
+import { experiences } from "./content";
+import ExperienceCard from "./components/experience-card/index.astro";
+import Section from "@/components/ui/section/index.astro";
+---
+
+<Section
+	title="my previous experiences"
+	subtitle="here are some of the opportunities i've had to work with great people and learn new things"
+	variant="secondary"
+>
+	<div class={styles.experiences}>
+		{experiences.map((experience) => <ExperienceCard {...experience} />)}
+	</div>
+</Section>

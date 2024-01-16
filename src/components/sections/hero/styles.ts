@@ -7,7 +7,6 @@ export const container = stack({
 	alignItems: "center",
 	p: ["8", "16", "24"],
 	gap: ["4", "8", "12"],
-	bg: "bg.subtle",
 });
 
 export const header = stack({
