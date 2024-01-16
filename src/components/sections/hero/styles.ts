@@ -10,6 +10,7 @@ export const container = stack({
 });
 
 export const header = stack({
+	zIndex: "dropdown",
 	gap: "2",
 });
 

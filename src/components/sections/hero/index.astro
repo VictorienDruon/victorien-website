@@ -1,7 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import design from "@/images/design.png";
 import * as styles from "./styles";
+import Design from "./components/design/index.astro";
 ---
 
 <div class={styles.container}>
@@ -10,12 +9,5 @@ import * as styles from "./styles";
 		<h2 class={styles.subtitle}>a software engineering student.</h2>
 	</div>
 
-	<div>
-		<Image
-			src={design}
-			alt="An orange circle covered by a rectangle fluted glass."
-			loading="eager"
-			draggable={false}
-		/>
-	</div>
+	<Design />
 </div>

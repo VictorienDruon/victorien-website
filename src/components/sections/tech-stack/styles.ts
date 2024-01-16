@@ -1,8 +1,6 @@
-import { stack } from "@styled-system/patterns";
+import { wrap } from "@styled-system/patterns";
 
-export const technologies = stack({
-	flexDir: "row",
-	flexWrap: "wrap",
+export const technologies = wrap({
 	justifyContent: "center",
 	alignItems: "center",
 	gap: "8",
