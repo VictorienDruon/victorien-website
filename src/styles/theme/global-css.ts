@@ -14,6 +14,14 @@ export const globalCss = defineGlobalStyles({
 		_dark: { colorScheme: "dark" },
 		userSelect: "none",
 	},
+	"h1, h2, h3, h4, h5, h6": {
+		fontFamily: "heading",
+		textStyle: "xl",
+	},
+	"p, ul, ol, dl, blockquote, span": {
+		fontFamily: "body",
+		textStyle: "md",
+	},
 	"*, *::before, *::after": {
 		borderColor: "border.default",
 		borderStyle: "solid",

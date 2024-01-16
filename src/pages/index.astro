@@ -1,16 +1,8 @@
 ---
-import RootLayout from "@/layouts/root.astro";
-import { css } from "@styled-system/css";
+import BaseLayout from "@/layouts/base.astro";
+import SectionHero from "@/components/sections/hero/index.astro";
 ---
 
-<RootLayout>
-	<div
-		class={css({
-			textStyle: "4xl",
-			color: "accent.11",
-			fontFamily: "heading",
-		})}
-	>
-		Hello !
-	</div>
-</RootLayout>
+<BaseLayout>
+	<SectionHero />
+</BaseLayout>

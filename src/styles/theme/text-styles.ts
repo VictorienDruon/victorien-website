@@ -3,79 +3,79 @@ import { defineTextStyles } from "@pandacss/dev";
 export const textStyles = defineTextStyles({
 	xs: {
 		value: {
-			fontSize: "0.75rem",
+			fontSize: "xs",
 			lineHeight: "1rem",
 		},
 	},
 	sm: {
 		value: {
-			fontSize: "0.875rem",
+			fontSize: "sm",
 			lineHeight: "1.25rem",
 		},
 	},
 	md: {
 		value: {
-			fontSize: "1rem",
+			fontSize: "md",
 			lineHeight: "1.5rem",
 		},
 	},
 	lg: {
 		value: {
-			fontSize: "1.125rem",
+			fontSize: "lg",
 			lineHeight: "1.75rem",
 		},
 	},
 	xl: {
 		value: {
-			fontSize: "1.25rem",
+			fontSize: "xl",
 			lineHeight: "1.75rem",
 		},
 	},
 	"2xl": {
 		value: {
-			fontSize: "1.5rem",
+			fontSize: "2xl",
 			lineHeight: "2rem",
 		},
 	},
 	"3xl": {
 		value: {
-			fontSize: "1.875rem",
+			fontSize: "3xl",
 			lineHeight: "2.25rem",
 		},
 	},
 	"4xl": {
 		value: {
-			fontSize: "2.25rem",
+			fontSize: "4xl",
 			lineHeight: "2.5rem",
 		},
 	},
 	"5xl": {
 		value: {
-			fontSize: "3rem",
+			fontSize: "5xl",
 			lineHeight: "1",
 		},
 	},
 	"6xl": {
 		value: {
-			fontSize: "3.75rem",
+			fontSize: "6xl",
 			lineHeight: "1",
 		},
 	},
 	"7xl": {
 		value: {
-			fontSize: "4.5rem",
+			fontSize: "7xl",
 			lineHeight: "1",
 		},
 	},
 	"8xl": {
 		value: {
-			fontSize: "6rem",
+			fontSize: "8xl",
 			lineHeight: "1",
 		},
 	},
 	"9xl": {
 		value: {
-			fontSize: "8rem",
+			fontSize: "9xl",
 			lineHeight: "1",
 		},
 	},
