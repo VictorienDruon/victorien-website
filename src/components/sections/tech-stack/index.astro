@@ -1,7 +1,7 @@
 ---
 import * as styles from "./styles";
 import { technologies } from "./content";
-import TechCard from "./components/tech-card/index.astro";
+import TechTag from "./components/tech-tag/index.astro";
 import Section from "@/components/ui/section/index.astro";
 ---
 
@@ -11,6 +11,6 @@ import Section from "@/components/ui/section/index.astro";
 	variant="primary"
 >
 	<div class={styles.technologies}>
-		{technologies.map((tech) => <TechCard {...tech} />)}
+		{technologies.map((tech) => <TechTag {...tech} />)}
 	</div>
 </Section>

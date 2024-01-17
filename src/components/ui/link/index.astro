@@ -1,10 +1,18 @@
 ---
+import type { HTMLAttributes } from "astro/types";
 import { link } from "./recipe";
+import type { RecipeVariantProps } from "@styled-system/types";
 
-const { href, text = false } = Astro.props;
+type Props = HTMLAttributes<"a"> &
+	RecipeVariantProps<typeof link> & {
+		href: string;
+	};
+
+const { href, text = false, ...props } = Astro.props;
+
 const className = link({ text });
 ---
 
-<a href={href} class={className}>
+<a href={href} class={className} {...props}>
 	<slot />
 </a>

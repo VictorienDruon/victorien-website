@@ -3,6 +3,7 @@ import { defineGlobalStyles } from "@pandacss/dev";
 export const globalCss = defineGlobalStyles({
 	html: {
 		lineHeight: 1.5,
+		scrollBehavior: "smooth",
 		MozOsxFontSmoothing: "grayscale",
 		textRendering: "optimizeLegibility",
 		WebkitFontSmoothing: "antialiased",

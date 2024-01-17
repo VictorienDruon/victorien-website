@@ -24,7 +24,7 @@ export const link = cva({
 			},
 			false: {
 				_focusVisible: {
-					outlineOffset: "2",
+					outlineOffset: "1",
 					outlineColor: "focusRing.default",
 				},
 			},

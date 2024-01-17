@@ -1,5 +1,6 @@
 ---
 import "@/styles/globals.css";
+import Navbar from "@/components/navbar/index.astro";
 import Themes from "astro-themes";
 ---
 
@@ -10,6 +11,7 @@ import Themes from "astro-themes";
 	</head>
 
 	<body>
+		<Navbar />
 		<slot />
 	</body>
 </html>

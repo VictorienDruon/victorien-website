@@ -1,5 +1,5 @@
 import { css } from "@styled-system/css";
-import { circle, hstack } from "@styled-system/patterns";
+import { hstack } from "@styled-system/patterns";
 
 export const container = hstack({
 	position: "relative",
@@ -27,14 +27,4 @@ export const glassBg = css({
 	gradientFrom: "neutral.1",
 	gradientTo: "neutral.4",
 	opacity: 0.3,
-});
-
-export const sun = circle({
-	size: "96",
-	bgGradient: {
-		base: "to-br",
-		_dark: "to-tl",
-	},
-	gradientFrom: "accent.6",
-	gradientTo: "accent.10",
 });

@@ -2,6 +2,13 @@
 import { Image } from "astro:assets";
 import * as styles from "./styles";
 
+type Props = {
+	title: string;
+	period: string;
+	description: string;
+	logo: ImageMetadata;
+};
+
 const { title, period, description, logo } = Astro.props;
 ---
 

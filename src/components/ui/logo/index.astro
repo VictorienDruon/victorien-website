@@ -1,0 +1,27 @@
+---
+import * as styles from "./styles";
+import { token } from "@styled-system/tokens";
+import type { JsxStyleProps } from "@styled-system/types";
+
+type Props = {
+	size: JsxStyleProps["width"];
+	withLink?: boolean;
+};
+
+const { size, withLink } = Astro.props;
+
+const style = {
+	// @ts-ignore
+	width: token.var(`spacing.${size}`),
+};
+---
+
+{
+	withLink ? (
+		<a href="/#" class={styles.link}>
+			<div class={styles.logo} style={style} />
+		</a>
+	) : (
+		<div class={styles.logo} style={style} />
+	)
+}

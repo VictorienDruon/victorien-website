@@ -1,5 +1,34 @@
 ---
-const { icon, ...props } = Astro.props;
+import { icons } from "lucide";
+import { token } from "@styled-system/tokens";
+import type { SizeToken } from "@styled-system/tokens";
+import type { HTMLAttributes } from "astro/types";
+
+type Size = "sm" | "md" | "lg" | "xl";
+
+export type Props = HTMLAttributes<"svg"> & {
+	name: keyof typeof icons;
+	size?: Size;
+};
+
+const getAffixSize = (size: Props["size"]): SizeToken => {
+	switch (size) {
+		case "sm":
+			return "4";
+		case "md":
+			return "5";
+		case "lg":
+			return "6";
+		case "xl":
+			return "7";
+		default:
+			return "5";
+	}
+};
+
+const { name, size, ...props } = Astro.props;
+
+const icon = icons[name];
 
 const [, attributes, children] = icon;
 
@@ -13,6 +42,19 @@ const componentChildren = children
 	.join("");
 
 const componentAttributes = { ...attributes, ...props };
+
+const iconSize = getAffixSize(size);
+const style = {
+	// @ts-ignore
+	width: token.var(`spacing.${iconSize}`),
+	// @ts-ignore
+	height: token.var(`spacing.${iconSize}`),
+};
 ---
 
-<svg {...componentAttributes} set:html={componentChildren} />
+<svg
+	stroke-width="1.5"
+	style={style}
+	set:html={componentChildren}
+	{...componentAttributes}
+/>
