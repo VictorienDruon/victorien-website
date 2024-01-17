@@ -4,7 +4,7 @@ import logoAlTrayou from "@/images/logos/al_trayou.webp";
 
 export const experiences = [
 	{
-		title: "IT Manager - Etuvile",
+		title: "IT Manager - Etuville",
 		period: "2023 - Present",
 		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
 	nunc eget aliquam ultricies, nunc nisl lacinia nunc, quis aliquam nunc
@@ -21,7 +21,7 @@ export const experiences = [
 	},
 	{
 		title: "Waiter - Beach Club",
-		period: "Summers 2022 & 2023",
+		period: "Summers 2021 & 2022",
 		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
 		nunc eget aliquam ultricies, nunc nisl lacinia nunc, quis aliquam nunc
 		nisl quis nunc.`,

@@ -8,7 +8,13 @@ const { title, period, description, logo } = Astro.props;
 <div class={styles.container}>
 	<div class={styles.card}>
 		<div>
-			<Image src={logo} alt="Astro Logo" width="96" height="96" />
+			<Image
+				src={logo}
+				alt="Astro Logo"
+				width="96"
+				height="96"
+				draggable={false}
+			/>
 		</div>
 
 		<div class={styles.content}>
@@ -16,7 +22,7 @@ const { title, period, description, logo } = Astro.props;
 
 			<h1>{title}</h1>
 
-			<p class={styles.text}>
+			<p class={styles.description}>
 				{description}
 			</p>
 		</div>

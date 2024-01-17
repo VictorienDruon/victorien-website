@@ -1,0 +1,10 @@
+---
+import { link } from "./recipe";
+
+const { href, text = false } = Astro.props;
+const className = link({ text });
+---
+
+<a href={href} class={className}>
+	<slot />
+</a>

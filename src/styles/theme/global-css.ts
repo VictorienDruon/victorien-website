@@ -12,7 +12,6 @@ export const globalCss = defineGlobalStyles({
 		background: "bg.default",
 		color: "fg.default",
 		_dark: { colorScheme: "dark" },
-		userSelect: "none",
 	},
 	"h1, h2, h3, h4, h5, h6": {
 		fontFamily: "heading",
@@ -32,7 +31,7 @@ export const globalCss = defineGlobalStyles({
 		color: "fg.subtle",
 	},
 	"*::selection": {
-		bg: "focusRing",
+		bg: "accent.4",
 	},
 	".border, .border-t, .border-r, .border-b, .border-l, hr": {
 		borderColor: "border.default",

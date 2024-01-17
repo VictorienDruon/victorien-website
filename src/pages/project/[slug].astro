@@ -1,0 +1,14 @@
+---
+import BaseLayout from "@/layouts/base.astro";
+import { projects } from "@/components/sections/projects/content.ts";
+
+export function getStaticPaths() {
+	return projects.map((project) => ({ params: { slug: project.slug } }));
+}
+
+const { slug } = Astro.params;
+---
+
+<BaseLayout>
+	<h1>{slug}</h1>
+</BaseLayout>

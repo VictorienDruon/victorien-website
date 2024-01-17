@@ -28,11 +28,11 @@ export const content = stack({
 	gap: "2",
 });
 
+export const description = css({
+	color: "fd.muted",
+});
+
 export const date = css({
 	color: "fg.subtle",
 	textStyle: "sm",
-});
-
-export const text = css({
-	color: "fd.muted",
 });

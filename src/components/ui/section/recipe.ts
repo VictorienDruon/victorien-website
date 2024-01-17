@@ -11,7 +11,7 @@ export const section = sva({
 			flexDir: "column",
 			justifyContent: "center",
 			alignItems: "center",
-			maxW: "4xl",
+			maxW: "5xl",
 			mx: "auto",
 			gap: "6",
 		},

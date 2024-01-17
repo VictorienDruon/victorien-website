@@ -1,6 +1,6 @@
 import { css } from "@styled-system/css";
 
-export const text = css({
+export const paragraph = css({
 	textStyle: "xl",
 	textAlign: "center",
 });

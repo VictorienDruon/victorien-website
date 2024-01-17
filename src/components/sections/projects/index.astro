@@ -1,0 +1,16 @@
+---
+import * as styles from "./styles";
+import { projects } from "./content";
+import ProjectCard from "./components/project-card/index.astro";
+import Section from "@/components/ui/section/index.astro";
+---
+
+<Section
+	title="my projects"
+	subtitle="here are some of the projects I've worked on"
+	variant="primary"
+>
+	<div class={styles.projects}>
+		{projects.map((project) => <ProjectCard {...project} />)}
+	</div>
+</Section>
