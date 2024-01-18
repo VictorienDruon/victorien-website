@@ -21,6 +21,10 @@ export const containerBg = css({
 	opacity: 0.7,
 });
 
+export const logo = hstack({
+	justifyContent: "flex-start",
+});
+
 export const pageLinks = hstack({
 	justifyContent: "center",
 	gap: "8",

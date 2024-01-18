@@ -5,10 +5,9 @@ import type { JsxStyleProps } from "@styled-system/types";
 
 type Props = {
 	size: JsxStyleProps["width"];
-	withLink?: boolean;
 };
 
-const { size, withLink } = Astro.props;
+const { size } = Astro.props;
 
 const style = {
 	// @ts-ignore
@@ -16,12 +15,4 @@ const style = {
 };
 ---
 
-{
-	withLink ? (
-		<a href="/#" class={styles.link}>
-			<div class={styles.logo} style={style} />
-		</a>
-	) : (
-		<div class={styles.logo} style={style} />
-	)
-}
+<div class={styles.logo} style={style}></div>

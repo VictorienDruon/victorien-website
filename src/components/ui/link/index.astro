@@ -6,13 +6,19 @@ import type { RecipeVariantProps } from "@styled-system/types";
 type Props = HTMLAttributes<"a"> &
 	RecipeVariantProps<typeof link> & {
 		href: string;
+		isExternal?: boolean;
 	};
 
-const { href, text = false, ...props } = Astro.props;
+const { href, isExternal, isText = true, ...props } = Astro.props;
 
-const className = link({ text });
+const className = link({ isText });
 ---
 
-<a href={href} class={className} {...props}>
+<a
+	href={href}
+	class={className}
+	{...isExternal && { target: "_blank", rel: "noreferrer noopener" }}
+	{...props}
+>
 	<slot />
 </a>

@@ -3,9 +3,12 @@ import { cva } from "@styled-system/css";
 export const link = cva({
 	base: {
 		cursor: "pointer",
+		color: "fg.default",
+		fontFamily: "body",
+		fontWeight: "bold",
 	},
 	variants: {
-		text: {
+		isText: {
 			true: {
 				display: "inline-flex",
 				alignItems: "center",

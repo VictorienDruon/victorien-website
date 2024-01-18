@@ -12,13 +12,13 @@ type Props = {
 const { title, description, slug } = Astro.props;
 ---
 
-<Link href={`/project/${slug}`}>
+<Link href={`/project/${slug}`} isText={false}>
 	<div class={styles.container}>
 		<div class={styles.backdrop}></div>
 
 		<div>
 			<div class={styles.header}>
-				<h1>{title}</h1>
+				<h3>{title}</h3>
 				<Icon name="Plus" size="xl" stroke-width="1" />
 			</div>
 
