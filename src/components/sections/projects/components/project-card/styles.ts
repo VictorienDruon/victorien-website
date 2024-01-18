@@ -6,7 +6,7 @@ export const container = stack({
 	gap: "2",
 });
 
-export const backdrop = css({
+export const visual = css({
 	w: "full",
 	aspectRatio: "wide",
 	bgGradient: {
@@ -21,4 +21,8 @@ export const backdrop = css({
 export const header = stack({
 	flexDirection: "row",
 	justifyContent: "space-between",
+});
+
+export const description = css({
+	color: "fg.muted",
 });

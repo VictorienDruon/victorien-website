@@ -1,8 +1,8 @@
 ---
 import * as styles from "./styles";
 import { technologies } from "./content";
-import TechTag from "./components/tech-tag/index.astro";
 import Section from "@/components/ui/section/index.astro";
+import TechTag from "@/components/ui/tech-tag/index.astro";
 ---
 
 <Section
@@ -11,6 +11,6 @@ import Section from "@/components/ui/section/index.astro";
 	variant="primary"
 >
 	<div class={styles.technologies}>
-		{technologies.map((tech) => <TechTag {...tech} />)}
+		{technologies.map((tech) => <TechTag size="lg" {...tech} />)}
 	</div>
 </Section>

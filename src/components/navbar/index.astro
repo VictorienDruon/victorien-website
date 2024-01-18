@@ -10,31 +10,33 @@ import { pageLinks, socialLinks } from "@/utils/dictionary";
 <nav class={styles.container}>
 	<div class={styles.containerBg}></div>
 
-	<div class={styles.logo}>
-		<Link href="/#" isText={false}>
-			<Logo size="8" />
-		</Link>
-	</div>
+	<div class={styles.navbar}>
+		<div class={styles.logo}>
+			<Link href="/#" isText={false}>
+				<Logo size="8" />
+			</Link>
+		</div>
 
-	<div class={styles.pageLinks}>
-		{
-			pageLinks.map(({ label, href, isExternal }) => (
-				<Link href={href} isExternal={isExternal} isText={false}>
-					<Button variant="ghost" tabindex={-1}>
-						{label}
-					</Button>
-				</Link>
-			))
-		}
-	</div>
+		<div class={styles.pageLinks}>
+			{
+				pageLinks.map(({ label, href, isExternal }) => (
+					<Link href={href} isExternal={isExternal} isText={false}>
+						<Button variant="ghost" tabindex={-1}>
+							{label}
+						</Button>
+					</Link>
+				))
+			}
+		</div>
 
-	<div class={styles.socialLinks}>
-		{
-			socialLinks.map(({ href, icon, isExternal }) => (
-				<Link href={href} isExternal={isExternal} isText={false}>
-					<IconButton name={icon} variant="ghost" tabindex={-1} />
-				</Link>
-			))
-		}
+		<div class={styles.socialLinks}>
+			{
+				socialLinks.map(({ href, icon, isExternal }) => (
+					<Link href={href} isExternal={isExternal} isText={false}>
+						<IconButton name={icon} variant="ghost" tabindex={-1} />
+					</Link>
+				))
+			}
+		</div>
 	</div>
 </nav>

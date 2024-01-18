@@ -6,23 +6,25 @@ import { pageLinks, socialLinks } from "@/utils/dictionary";
 ---
 
 <footer class={styles.container}>
-	<div class={styles.linkGroups}>
-		{
-			[pageLinks, socialLinks].map((linksGroup) => (
-				<div class={styles.linkGroup}>
-					{linksGroup.map(({ label, href, isExternal }) => (
-						<Link href={href} isExternal={isExternal}>
-							{label}
-						</Link>
-					))}
-				</div>
-			))
-		}
+	<div class={styles.footer}>
+		<div class={styles.linkGroups}>
+			{
+				[pageLinks, socialLinks].map((linksGroup) => (
+					<div class={styles.linkGroup}>
+						{linksGroup.map(({ label, href, isExternal }) => (
+							<Link href={href} isExternal={isExternal}>
+								{label}
+							</Link>
+						))}
+					</div>
+				))
+			}
+		</div>
+
+		<Separator />
+
+		<p>
+			© {new Date().getFullYear()} Victorien Druon - All rights reserved
+		</p>
 	</div>
-
-	<Separator />
-
-	<p>
-		© {new Date().getFullYear()} Victorien Druon - All rights reserved
-	</p>
 </footer>

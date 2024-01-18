@@ -14,7 +14,7 @@ const { title, description, slug } = Astro.props;
 
 <Link href={`/project/${slug}`} isText={false}>
 	<div class={styles.container}>
-		<div class={styles.backdrop}></div>
+		<div class={styles.visual}></div>
 
 		<div>
 			<div class={styles.header}>
@@ -22,7 +22,7 @@ const { title, description, slug } = Astro.props;
 				<Icon name="Plus" size="xl" stroke-width="1" />
 			</div>
 
-			<p>{description}</p>
+			<p class={styles.description}>{description}</p>
 		</div>
 	</div>
 </Link>
