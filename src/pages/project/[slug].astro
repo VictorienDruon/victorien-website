@@ -1,11 +1,10 @@
 ---
 import BaseLayout from "@/layouts/base.astro";
+import ProjectLayout from "@/layouts/project.astro";
 import ProjectHeader from "@/components/project/header/index.astro";
 import ProjectVisuals from "@/components/project/visuals/index.astro";
 import ProjectDetails from "@/components/project/details/index.astro";
 import { projects } from "@/components/sections/projects/content.ts";
-import { stack } from "@styled-system/patterns";
-import { css } from "@styled-system/css";
 
 export function getStaticPaths() {
 	return projects.map((project) => ({ params: { slug: project.slug } }));
@@ -34,30 +33,20 @@ const project = {
 };
 ---
 
-<BaseLayout>
-	<div
-		class={css({
-			px: { base: "8", sm: "16", md: "24" },
-			py: { base: "16", sm: "20", md: "24" },
-		})}
-	>
-		<div
-			class={stack({
-				maxW: "4xl",
-				mx: "auto",
-				gap: ["8", "10", "12"],
-			})}
-		>
-			<ProjectHeader
-				title={project.title}
-				summary={project.summary}
-				publishedOn={project.publishedOn}
-			/>
-			<ProjectVisuals visuals={project.visuals} />
-			<ProjectDetails
-				technologies={project.technologies}
-				description={project.description}
-			/>
-		</div>
-	</div>
+<BaseLayout
+	title=`${project.title} | Victorien Druon`
+	description={project.summary}
+>
+	<ProjectLayout>
+		<ProjectHeader
+			title={project.title}
+			summary={project.summary}
+			publishedOn={project.publishedOn}
+		/>
+		<ProjectVisuals visuals={project.visuals} />
+		<ProjectDetails
+			technologies={project.technologies}
+			description={project.description}
+		/>
+	</ProjectLayout>
 </BaseLayout>
