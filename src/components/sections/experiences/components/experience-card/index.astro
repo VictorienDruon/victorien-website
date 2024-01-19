@@ -6,28 +6,35 @@ type Props = {
 	title: string;
 	period: string;
 	description: string;
-	logo: ImageMetadata;
+	logo: {
+		src: string;
+		alt: string;
+		width: number;
+		height: number;
+	};
 };
 
 const { title, period, description, logo } = Astro.props;
+const { src, alt, width, height } = logo;
 ---
 
 <div class={styles.container}>
 	<div class={styles.card}>
 		<div>
 			<Image
-				src={logo}
-				alt="Astro Logo"
-				width="96"
-				height="96"
+				src={src}
+				alt={alt}
+				width={width}
+				height={height}
 				draggable={false}
+				class={styles.visual}
 			/>
 		</div>
 
 		<div class={styles.content}>
 			<p class={styles.date}>{period}</p>
 
-			<h3>{title}</h3>
+			<h3 class={styles.title}>{title}</h3>
 
 			<p class={styles.description}>
 				{description}

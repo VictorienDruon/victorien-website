@@ -1,7 +1,3 @@
-import logoEtuville from "@/images/logos/etuville.webp";
-import logoLogifel from "@/images/logos/logifel.webp";
-import logoAlTrayou from "@/images/logos/al_trayou.webp";
-
 export const experiences = [
 	{
 		title: "IT Manager - Etuville",
@@ -9,7 +5,12 @@ export const experiences = [
 		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
 	nunc eget aliquam ultricies, nunc nisl lacinia nunc, quis aliquam nunc
 	nisl quis nunc.`,
-		logo: logoEtuville,
+		logo: {
+			src: "https://tinyurl.com/7rmccdn5",
+			alt: "2",
+			width: 100,
+			height: 100,
+		},
 	},
 	{
 		title: "Industrial Internship - Logifel",
@@ -17,7 +18,12 @@ export const experiences = [
 		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
 		nunc eget aliquam ultricies, nunc nisl lacinia nunc, quis aliquam nunc
 		nisl quis nunc.`,
-		logo: logoLogifel,
+		logo: {
+			src: "https://tinyurl.com/7rmccdn5",
+			alt: "2",
+			width: 100,
+			height: 100,
+		},
 	},
 	{
 		title: "Waiter - Beach Club",
@@ -25,6 +31,11 @@ export const experiences = [
 		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
 		nunc eget aliquam ultricies, nunc nisl lacinia nunc, quis aliquam nunc
 		nisl quis nunc.`,
-		logo: logoAlTrayou,
+		logo: {
+			src: "https://tinyurl.com/7rmccdn5",
+			alt: "2",
+			width: 100,
+			height: 100,
+		},
 	},
 ];

@@ -18,8 +18,8 @@ const { title, description, slug } = Astro.props;
 
 		<div>
 			<div class={styles.header}>
-				<h3>{title}</h3>
-				<Icon name="Plus" size="xl" stroke-width="1" />
+				<h3 class={styles.title}>{title}</h3>
+				<Icon name="Plus" size="lg" stroke-width="1.5" />
 			</div>
 
 			<p class={styles.description}>{description}</p>

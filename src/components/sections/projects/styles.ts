@@ -1,7 +1,7 @@
 import { grid } from "@styled-system/patterns";
 
 export const projects = grid({
-	gridTemplateColumns: "2",
-	gridColumnGap: "12",
-	gridRowGap: "8",
+	gridTemplateColumns: [1, 2, 3],
+	justifyContent: "center",
+	gap: ["4", "6", "8"],
 });

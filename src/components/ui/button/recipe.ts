@@ -10,7 +10,7 @@ export const button = cva({
 		justifyContent: "center",
 		outline: "none",
 		borderWidth: 1,
-		fontFamily: "body",
+		fontFamily: "heading",
 		fontWeight: "bold",
 		transitionDuration: "normal",
 		transitionProperty: "background, border-color, color, box-shadow",

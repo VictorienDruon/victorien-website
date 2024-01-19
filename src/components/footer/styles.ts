@@ -11,10 +11,16 @@ export const footer = stack({
 	gap: "4",
 });
 
-export const linkGroups = hstack({
-	justifyContent: "space-between",
+export const linkGroups = stack({
+	flexDir: ["column", "row"],
+	justifyContent: { sm: "space-between" },
+	alignItems: { smDown: "center" },
 });
 
 export const linkGroup = hstack({
 	gap: "4",
+});
+
+export const copyright = css({
+	textAlign: { smDown: "center" },
 });

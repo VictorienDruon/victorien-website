@@ -4,7 +4,8 @@ export const section = sva({
 	slots: ["container", "section", "title", "subtitle"],
 	base: {
 		container: {
-			p: "24",
+			px: { base: "8", sm: "16", md: "24" },
+			py: { base: "16", sm: "20", md: "24" },
 		},
 		section: {
 			display: "flex",
@@ -13,17 +14,18 @@ export const section = sva({
 			alignItems: "center",
 			maxW: "4xl",
 			mx: "auto",
-			gap: "6",
+			gap: ["4", "6", "8"],
 		},
 		title: {
 			color: "fg.default",
-			textStyle: "3xl",
+			textStyle: ["xl", "2xl", "3xl"],
+			textAlign: "center",
 		},
 		subtitle: {
 			color: "fg.muted",
-			textStyle: "xl",
+			textStyle: ["md", "lg", "xl"],
 			textAlign: "center",
-			mb: "12",
+			mb: ["4", "6", "8"],
 		},
 	},
 	defaultVariants: {

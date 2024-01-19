@@ -1,7 +1,6 @@
-import { stack } from "@styled-system/patterns";
+import { grid, wrap } from "@styled-system/patterns";
 
-export const experiences = stack({
-	flexDir: "row",
+export const experiences = wrap({
 	justifyContent: "center",
-	gap: ["4", "8", "12"],
+	gap: ["4", "6", "8"],
 });

@@ -24,9 +24,4 @@ export const projects = [
 		description: "This is a description of project 5",
 		slug: "project-5",
 	},
-	{
-		title: "Project 6",
-		description: "This is a description of project 6",
-		slug: "project-6",
-	},
 ];

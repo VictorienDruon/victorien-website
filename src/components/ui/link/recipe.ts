@@ -4,7 +4,7 @@ export const link = cva({
 	base: {
 		cursor: "pointer",
 		color: "fg.default",
-		fontFamily: "body",
+		fontFamily: "heading",
 		fontWeight: "bold",
 	},
 	variants: {

@@ -17,14 +17,16 @@ const { visuals } = Astro.props;
 <div class={styles.container}>
 	{
 		visuals.map(({ src, alt, width, height }) => (
-			<Image
-				src={src}
-				alt={alt}
-				width={width}
-				height={height}
-				draggable={false}
-				class={styles.visual}
-			/>
+			<div class={styles.visualContainer}>
+				<Image
+					src={src}
+					alt={alt}
+					width={width}
+					height={height}
+					draggable={false}
+					class={styles.visual}
+				/>
+			</div>
 		))
 	}
 </div>

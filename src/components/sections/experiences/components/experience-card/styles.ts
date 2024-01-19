@@ -1,9 +1,9 @@
 import { css } from "@styled-system/css";
-import { stack } from "@styled-system/patterns";
+import { square, stack } from "@styled-system/patterns";
 
 export const container = css({
 	_last: {
-		perspective: "800px",
+		perspective: "1200px",
 		"& div": {
 			transform: "rotateY(-20deg)",
 		},
@@ -11,10 +11,11 @@ export const container = css({
 });
 
 export const card = stack({
-	w: "xs",
+	w: ["56", "60", "64"],
+	h: "full",
 	aspectRatio: "portrait",
-	p: "8",
-	gap: "24",
+	p: ["4", "5", "6"],
+	gap: ["4", "5", "6"],
 	bgGradient: {
 		base: "to-bl",
 		_dark: "to-tr",
@@ -24,15 +25,26 @@ export const card = stack({
 	boxShadow: "lg",
 });
 
+export const visual = square({
+	size: ["12", "14", "16"],
+	objectFit: "cover",
+});
+
 export const content = stack({
-	gap: "2",
+	gap: "1",
+});
+
+export const title = css({
+	color: "fg.default",
+	textStyle: ["md", "lg"],
 });
 
 export const description = css({
 	color: "fd.muted",
+	textStyle: ["sm", "md"],
 });
 
 export const date = css({
 	color: "fg.subtle",
-	textStyle: "sm",
+	textStyle: ["xs", "sm"],
 });

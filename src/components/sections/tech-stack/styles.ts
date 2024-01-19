@@ -3,5 +3,7 @@ import { wrap } from "@styled-system/patterns";
 export const technologies = wrap({
 	justifyContent: "center",
 	alignItems: "center",
-	gap: "8",
+	maxW: "3xl",
+	mx: "auto",
+	gap: "4",
 });

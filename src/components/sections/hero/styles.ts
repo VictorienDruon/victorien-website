@@ -5,21 +5,24 @@ export const container = stack({
 	flexDir: ["column", "row"],
 	justifyContent: "center",
 	alignItems: "center",
-	p: ["8", "16", "24"],
-	gap: ["4", "8", "12"],
+	px: ["8", "16", "24"],
+	py: ["16", "20", "24"],
+	gap: ["4", "6", "8"],
 });
 
 export const header = stack({
-	zIndex: "dropdown",
-	gap: "2",
+	zIndex: "docked",
+	gap: ["2", "3", "4"],
 });
 
 export const title = css({
 	color: "accent.10",
-	textStyle: "6xl",
+	textStyle: ["4xl", "5xl", "5xl", "6xl"],
+	textAlign: { smDown: "center" },
 });
 
 export const subtitle = css({
 	color: "fg.subtle",
-	textStyle: "4xl",
+	textStyle: ["2xl", "3xl", "3xl", "4xl"],
+	textAlign: { smDown: "center" },
 });
