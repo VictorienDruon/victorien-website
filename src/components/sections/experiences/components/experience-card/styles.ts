@@ -25,7 +25,7 @@ export const card = stack({
 	boxShadow: "lg",
 });
 
-export const visual = square({
+export const logo = square({
 	size: ["12", "14", "16"],
 	objectFit: "cover",
 });

@@ -2,20 +2,15 @@ import { css } from "@styled-system/css";
 import { stack } from "@styled-system/patterns";
 
 export const container = stack({
-	w: ["48", "56", "64"],
+	w: ["56", "60", "64"],
 	h: "full",
-	gap: ["1", "2"],
+	gap: "2",
 });
 
-export const visual = css({
+export const backdrop = css({
 	w: "full",
 	aspectRatio: "wide",
-	bgGradient: {
-		base: "to-br",
-		_dark: "to-tl",
-	},
-	gradientFrom: "accent.6",
-	gradientTo: "accent.10",
+	objectFit: "cover",
 	boxShadow: "lg",
 });
 

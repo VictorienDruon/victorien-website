@@ -1,23 +1,19 @@
 ---
 import * as styles from "./styles";
 import { Image } from "astro:assets";
+import type { Visual } from "@/types/visual";
 
 type Props = {
-	visuals: {
-		src: string;
-		alt: string;
-		width: number;
-		height: number;
-	}[];
+	visuals: Visual[];
 };
 
 const { visuals } = Astro.props;
 ---
 
 <div class={styles.container}>
-	{
-		visuals.map(({ src, alt, width, height }) => (
-			<div class={styles.visualContainer}>
+	<div class={styles.visuals}>
+		{
+			visuals.map(({ src, alt, width, height }) => (
 				<Image
 					src={src}
 					alt={alt}
@@ -26,7 +22,7 @@ const { visuals } = Astro.props;
 					draggable={false}
 					class={styles.visual}
 				/>
-			</div>
-		))
-	}
+			))
+		}
+	</div>
 </div>

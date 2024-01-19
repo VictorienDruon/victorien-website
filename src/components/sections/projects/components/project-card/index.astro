@@ -2,19 +2,30 @@
 import * as styles from "./styles";
 import Link from "@/components/ui/link/index.astro";
 import Icon from "@/components/ui/icon/index.astro";
+import { Image } from "astro:assets";
+import type { Visual } from "@/types/visual";
 
 type Props = {
 	title: string;
 	description: string;
 	slug: string;
+	backdrop: Visual;
 };
 
-const { title, description, slug } = Astro.props;
+const { title, description, slug, backdrop } = Astro.props;
+const { src, alt, width, height } = backdrop;
 ---
 
 <Link href={`/project/${slug}`} isText={false}>
 	<div class={styles.container}>
-		<div class={styles.visual}></div>
+		<Image
+			src={src}
+			alt={alt}
+			width={width}
+			height={height}
+			draggable={false}
+			class={styles.backdrop}
+		/>
 
 		<div>
 			<div class={styles.header}>
