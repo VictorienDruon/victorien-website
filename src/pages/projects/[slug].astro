@@ -1,0 +1,28 @@
+---
+import BaseLayout from "@/layouts/base.astro";
+import ProjectLayout from "@/layouts/project.astro";
+import ProjectHeader from "@/components/project/header/index.astro";
+import ProjectVisuals from "@/components/project/visuals/index.astro";
+import ProjectDetails from "@/components/project/details/index.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+	const projects = await getCollection("projects");
+	return projects.map((project) => ({
+		params: { slug: project.id },
+		props: { project },
+	}));
+}
+
+const { project } = Astro.props;
+const { title, summary, publishedOn, visuals, techStack, description } =
+	project.data;
+---
+
+<BaseLayout title=`${title} | Victorien Druon` description={summary}>
+	<ProjectLayout>
+		<ProjectHeader title={title} summary={summary} publishedOn={publishedOn} />
+		<ProjectVisuals visuals={visuals} />
+		<ProjectDetails techStack={techStack} description={description} />
+	</ProjectLayout>
+</BaseLayout>

@@ -26,7 +26,7 @@ export const title = css({
 	textStyle: ["md", "lg"],
 });
 
-export const description = css({
+export const summary = css({
 	color: "fg.muted",
 	textStyle: ["sm", "md"],
 });

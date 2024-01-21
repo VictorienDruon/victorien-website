@@ -1,8 +1,13 @@
 ---
 import * as styles from "./styles";
-import { experiences } from "./content";
 import ExperienceCard from "./components/experience-card/index.astro";
 import Section from "@/components/ui/section/index.astro";
+import { getCollection } from "astro:content";
+
+const experiences = await getCollection("experiences");
+const sortedExperiences = experiences.sort(
+	(a, b) => b.data.startDate.getTime() - a.data.startDate.getTime()
+);
 ---
 
 <Section
@@ -11,6 +16,10 @@ import Section from "@/components/ui/section/index.astro";
 	variant="secondary"
 >
 	<div class={styles.experiences}>
-		{experiences.map((experience) => <ExperienceCard {...experience} />)}
+		{
+			sortedExperiences.map((experience) => (
+				<ExperienceCard experience={experience} />
+			))
+		}
 	</div>
 </Section>

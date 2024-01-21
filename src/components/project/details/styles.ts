@@ -4,6 +4,6 @@ export const container = stack({
 	gap: ["2", "3", "4"],
 });
 
-export const technologies = wrap({
+export const techStack = wrap({
 	gap: ["2", "3", "4"],
 });

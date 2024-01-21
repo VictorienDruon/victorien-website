@@ -1,12 +1,23 @@
 ---
 import * as styles from "./styles";
 import Section from "@/components/ui/section/index.astro";
+
+const birthdate = new Date("2004-02-26");
+const currentDate = new Date();
+const hasBirthdayPassed =
+	currentDate.getMonth() > birthdate.getMonth() ||
+	(currentDate.getMonth() === birthdate.getMonth() &&
+		currentDate.getDate() >= birthdate.getDate());
+const age =
+	currentDate.getFullYear() -
+	birthdate.getFullYear() -
+	(hasBirthdayPassed ? 0 : 1);
 ---
 
 <Section title="about me" variant="secondary" id="about">
 	<p class={styles.paragraph}>
-		my name is <span class={styles.highlight}>Victorien Druon</span> and i'm a 19
-		years old French software engineering student.
+		my name is <span class={styles.highlight}>Victorien Druon</span> and i'm a
+		{age} years old French software engineering student.
 		<br />
 
 		i'm passionate about <span class={styles.highlight}>building</span> products

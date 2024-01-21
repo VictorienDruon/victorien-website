@@ -3,26 +3,23 @@ import * as styles from "./styles";
 import Link from "@/components/ui/link/index.astro";
 import Icon from "@/components/ui/icon/index.astro";
 import { Image } from "astro:assets";
-import type { Visual } from "@/types/visual";
+import type { CollectionEntry } from "astro:content";
 
 type Props = {
-	title: string;
-	description: string;
-	slug: string;
-	backdrop: Visual;
+	project: CollectionEntry<"projects">;
 };
 
-const { title, description, slug, backdrop } = Astro.props;
-const { src, alt, width, height } = backdrop;
+const { project } = Astro.props;
+const { title, summary } = project.data;
 ---
 
-<Link href={`/project/${slug}`} isText={false}>
+<Link href={`/projects/${project.id}`} isText={false}>
 	<div class={styles.container}>
 		<Image
-			src={src}
-			alt={alt}
-			width={width}
-			height={height}
+			src="https://tinyurl.com/7rmccdn5"
+			alt=""
+			width="100"
+			height="100"
 			draggable={false}
 			class={styles.backdrop}
 		/>
@@ -33,7 +30,7 @@ const { src, alt, width, height } = backdrop;
 				<Icon name="Plus" size="lg" stroke-width="1.5" />
 			</div>
 
-			<p class={styles.description}>{description}</p>
+			<p class={styles.summary}>{summary}</p>
 		</div>
 	</div>
 </Link>

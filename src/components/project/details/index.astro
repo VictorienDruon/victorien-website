@@ -3,16 +3,16 @@ import * as styles from "./styles";
 import TechTag from "@/components/ui/tech-tag/index.astro";
 
 type Props = {
-	technologies: string[];
+	techStack: string[];
 	description: string;
 };
 
-const { technologies, description } = Astro.props;
+const { techStack, description } = Astro.props;
 ---
 
 <div class={styles.container}>
-	<div class={styles.technologies}>
-		{technologies.map((tech) => <TechTag size="sm" title={tech} />)}
+	<div class={styles.techStack}>
+		{techStack.map((tech) => <TechTag size="sm" title={tech} />)}
 	</div>
 
 	<p>{description}</p>

@@ -1,26 +1,21 @@
 ---
 import * as styles from "./styles";
 import { Image } from "astro:assets";
-import type { Visual } from "@/types/visual";
+import type { CollectionEntry } from "astro:content";
 
 type Props = {
-	title: string;
-	period: string;
-	description: string;
-	logo: Visual;
+	experience: CollectionEntry<"experiences">;
 };
 
-const { title, period, description, logo } = Astro.props;
-const { src, alt, width, height } = logo;
+const { experience } = Astro.props;
+const { title, period, description, logo } = experience.data;
 ---
 
 <div class={styles.container}>
 	<div class={styles.card}>
 		<Image
-			src={src}
-			alt={alt}
-			width={width}
-			height={height}
+			src={logo}
+			alt={`Logo of ${title}.`}
 			draggable={false}
 			class={styles.logo}
 		/>
