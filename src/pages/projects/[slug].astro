@@ -9,20 +9,22 @@ import { getCollection } from "astro:content";
 export async function getStaticPaths() {
 	const projects = await getCollection("projects");
 	return projects.map((project) => ({
-		params: { slug: project.id },
+		params: { slug: project.slug },
 		props: { project },
 	}));
 }
 
 const { project } = Astro.props;
-const { title, summary, publishedOn, visuals, techStack, description } =
-	project.data;
+const { title, summary, publishedOn, visuals, techStack } = project.data;
+const { Content } = await project.render();
 ---
 
 <BaseLayout title=`${title} | Victorien Druon` description={summary}>
 	<ProjectLayout>
 		<ProjectHeader title={title} summary={summary} publishedOn={publishedOn} />
-		<ProjectVisuals visuals={visuals} />
-		<ProjectDetails techStack={techStack} description={description} />
+		{visuals && <ProjectVisuals visuals={visuals} />}
+		<ProjectDetails techStack={techStack}>
+			<Content />
+		</ProjectDetails>
 	</ProjectLayout>
 </BaseLayout>

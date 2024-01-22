@@ -4,14 +4,20 @@ import { center, grid } from "@styled-system/patterns";
 export const container = center();
 
 export const visuals = grid({
-	gridTemplateColumns: [1, 2, 2, 3],
+	gridTemplateColumns: [1, 2],
 	justifyContent: "center",
 	gap: "2",
 });
 
 export const visual = css({
-	w: ["56", "60", "64"],
+	w: "md",
 	h: "full",
 	aspectRatio: "wide",
-	objectFit: "cover",
+	objectFit: "contain",
+	bgGradient: {
+		base: "to-bl",
+		_dark: "to-tr",
+	},
+	gradientFrom: "neutral.2",
+	gradientTo: "neutral.5",
 });

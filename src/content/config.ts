@@ -13,20 +13,21 @@ const experiences = defineCollection({
 });
 
 const projects = defineCollection({
-	type: "data",
+	type: "content",
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
-			publishedOn: z.string().pipe(z.coerce.date()),
+			publishedOn: z.string().pipe(z.coerce.date()).optional(),
 			summary: z.string(),
-			description: z.string(),
 			techStack: z.array(z.string()),
-			visuals: z.array(
-				z.object({
-					src: image(),
-					alt: z.string(),
-				})
-			),
+			visuals: z
+				.array(
+					z.object({
+						src: image(),
+						alt: z.string(),
+					})
+				)
+				.optional(),
 		}),
 });
 

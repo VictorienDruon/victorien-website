@@ -16,7 +16,7 @@ export const summary = css({
 	textStyle: ["lg", "xl", "2xl"],
 });
 
-export const informations = css({
+export const publishedDate = css({
 	color: "fg.subtle",
 	textStyle: ["xs", "sm", "md"],
 });

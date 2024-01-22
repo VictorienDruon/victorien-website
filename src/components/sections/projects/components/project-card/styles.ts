@@ -10,8 +10,14 @@ export const container = stack({
 export const backdrop = css({
 	w: "full",
 	aspectRatio: "wide",
-	objectFit: "cover",
+	objectFit: "contain",
 	boxShadow: "lg",
+	bgGradient: {
+		base: "to-bl",
+		_dark: "to-tr",
+	},
+	gradientFrom: "neutral.2",
+	gradientTo: "neutral.5",
 });
 
 export const header = stack({
@@ -29,4 +35,7 @@ export const title = css({
 export const summary = css({
 	color: "fg.muted",
 	textStyle: ["sm", "md"],
+	whiteSpace: "nowrap",
+	overflow: "hidden",
+	textOverflow: "ellipsis",
 });

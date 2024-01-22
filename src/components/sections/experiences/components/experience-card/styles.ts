@@ -3,7 +3,7 @@ import { square, stack } from "@styled-system/patterns";
 
 export const container = css({
 	_last: {
-		perspective: "1200px",
+		perspective: "800px",
 		"& div": {
 			transform: "rotateY(-20deg)",
 		},
