@@ -28,7 +28,7 @@ export const pageLinks: Link[] = [
 export const socialLinks: Link[] = [
 	{
 		label: "LinkedIn",
-		href: "https://www.linkedin.com/in/victorien-druon-756991294/",
+		href: "https://www.linkedin.com/in/victorien-druon",
 		icon: "Linkedin",
 		isExternal: true,
 	},
